@@ -1,0 +1,19 @@
+# Data files — do not commit raw or intermediate data
+*.parquet
+snack_gap_analysis_ready.csv
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.env
+venv/
+.venv/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# OS
+.DS_Store
+Thumbs.db
