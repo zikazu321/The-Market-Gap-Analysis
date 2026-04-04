@@ -7,7 +7,7 @@ Email: zabdiel.addo@ashesi.edu.gh
 Version: 1.0.0
 Brief: <<brief>>
 -----
-Last Modified: Saturday, 4th April 2026 8:02:59 PM
+Last Modified: Saturday, 4th April 2026 8:06:59 PM
 Modified By: Zabdiel Addo
 -----
 Copyright ©2026 Zabdiel Addo
@@ -338,20 +338,17 @@ PLOTLY_LAYOUT = dict(
         font_family="Arial",
         font_color="#1C2833",
     ),
-    legend=dict(
-        font=dict(size=11, color="#1C2833"),
-        title=dict(font=dict(size=11, color="#1C2833")),
-    ),
 )
 
 AXIS_STYLE = dict(
     showgrid=True,
     gridcolor="#D9E2EC",
     gridwidth=1,
-    linecolor="#AAB7C4",
-    linewidth=1.2,
-    tickfont=dict(size=12, color="#1C2833"),
-    title_font=dict(size=13, color="#1C2833"),
+    linecolor="#94A3B8",
+    linewidth=1.4,
+    tickfont=dict(size=13, color="#111827"),
+    title_font=dict(size=14, color="#111827"),
+    tickcolor="#94A3B8",
 )
 
 
