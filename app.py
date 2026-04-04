@@ -7,7 +7,7 @@ Email: zabdiel.addo@ashesi.edu.gh
 Version: 1.0.0
 Brief: <<brief>>
 -----
-Last Modified: Saturday, 4th April 2026 8:06:59 PM
+Last Modified: Saturday, 4th April 2026 8:10:50 PM
 Modified By: Zabdiel Addo
 -----
 Copyright ©2026 Zabdiel Addo
@@ -491,11 +491,14 @@ if page == "Market Overview":
             **PLOTLY_LAYOUT,
             title=dict(
                 text="Product Count by Category",
-                font=dict(size=13, color="#1C2833"),
-                x=0,
+                title_font=dict(size=14, color="#111827"),
+                tickfont=dict(size=13, color="#111827"),
             ),
-            xaxis=dict(**AXIS_STYLE, title="Number of Products"),
-            yaxis=dict(**AXIS_STYLE, title=""),
+            yaxis=dict(
+                **AXIS_STYLE,
+                title="",
+                tickfont=dict(size=13, color="#111827"),
+            ),
             height=420,
             showlegend=False,
         )
