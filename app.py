@@ -7,7 +7,7 @@ Email: zabdiel.addo@ashesi.edu.gh
 Version: 1.0.0
 Brief: <<brief>>
 -----
-Last Modified: Saturday, 4th April 2026 8:14:56 PM
+Last Modified: Saturday, 4th April 2026 8:30:20 PM
 Modified By: Zabdiel Addo
 -----
 Copyright ©2026 Zabdiel Addo
@@ -347,8 +347,11 @@ AXIS_STYLE = dict(
     linecolor="#94A3B8",
     linewidth=1.4,
     tickcolor="#94A3B8",
-    tickfont=dict(size=13, color="#111827"),
 )
+
+AXIS_FONT = dict(size=13, color="#111827")
+AXIS_TITLE_FONT = dict(size=14, color="#111827")
+LEGEND_FONT = dict(size=10, color="#111827")
 
 
 # ─────────────────────────────────────────────
@@ -496,13 +499,14 @@ if page == "Market Overview":
             xaxis=dict(
                 **AXIS_STYLE,
                 title="Number of Products",
-                title_font=dict(size=14, color="#111827"),
-                tickfont=dict(size=13, color="#111827"),
+                tickfont=AXIS_FONT,
+                title_font=AXIS_TITLE_FONT,
             ),
             yaxis=dict(
                 **AXIS_STYLE,
                 title="",
-                tickfont=dict(size=13, color="#111827"),
+                tickfont=AXIS_FONT,
+                title_font=AXIS_TITLE_FONT,
             ),
             height=420,
             showlegend=False,
@@ -569,8 +573,8 @@ if page == "Market Overview":
                 font=dict(size=13, color="#1C2833"),
                 x=0,
             ),
-            xaxis=dict(**AXIS_STYLE, title="g per 100g"),
-            yaxis=dict(**AXIS_STYLE, title=""),
+            xaxis=dict(**AXIS_STYLE, title="g per 100g", tickfont=AXIS_FONT, title_font=AXIS_TITLE_FONT),
+            yaxis=dict(**AXIS_STYLE, title="", tickfont=AXIS_FONT, title_font=AXIS_TITLE_FONT          ),
             barmode="overlay",
             height=420,
             legend=dict(orientation="h", y=-0.12, x=0, font=dict(size=10)),
@@ -614,8 +618,18 @@ if page == "Market Overview":
             font=dict(size=13, color="#1C2833"),
             x=0,
         ),
-        xaxis=dict(**AXIS_STYLE, title=""),
-        yaxis=dict(**AXIS_STYLE, title="Health Score"),
+        xaxis=dict(
+            **AXIS_STYLE,
+            title="",
+            tickfont=AXIS_FONT,
+            title_font=AXIS_TITLE_FONT,
+        ),
+        yaxis=dict(
+            **AXIS_STYLE,
+            title="Health Score",
+            tickfont=AXIS_FONT,
+            title_font=AXIS_TITLE_FONT,
+        ),
         height=360,
         showlegend=False,
     )
@@ -737,8 +751,18 @@ elif page == "Nutrient Matrix":
             font=dict(size=14, color="#1C2833"),
             x=0,
         ),
-        xaxis=dict(**AXIS_STYLE, title="Sugar (g per 100g)"),
-        yaxis=dict(**AXIS_STYLE, title="Protein (g per 100g)"),
+        xaxis=dict(
+            **AXIS_STYLE,
+            title="Sugar (g per 100g)",
+            tickfont=AXIS_FONT,
+            title_font=AXIS_TITLE_FONT,
+        ),
+        yaxis=dict(
+            **AXIS_STYLE,
+            title="Protein (g per 100g)",
+            tickfont=AXIS_FONT,
+            title_font=AXIS_TITLE_FONT,
+        ),
         height=560,
         legend=dict(
             title=dict(text="Category", font=dict(size=11)),
@@ -823,8 +847,18 @@ elif page == "Nutrient Matrix":
             height=n_rows * 280,
             title=dict(text="Sugar vs Protein — Per Category", font=dict(size=13), x=0),
         )
-        fig_grid.update_xaxes(**AXIS_STYLE, title_text="Sugar (g)")
-        fig_grid.update_yaxes(**AXIS_STYLE, title_text="Protein (g)")
+        fig_grid.update_xaxes(
+            **AXIS_STYLE,
+            title_text="Sugar (g)",
+            tickfont=AXIS_FONT,
+            title_font=AXIS_TITLE_FONT,
+        )
+        fig_grid.update_yaxes(
+            **AXIS_STYLE,
+            title_text="Protein (g)",
+            tickfont=AXIS_FONT,
+            title_font=AXIS_TITLE_FONT,
+        )
 
         st.plotly_chart(fig_grid, use_container_width=True)
 
@@ -893,9 +927,17 @@ elif page == "Market Gap":
                 text="Gap Score by Category", font=dict(size=13, color="#1C2833"), x=0
             ),
             xaxis=dict(
-                **AXIS_STYLE, title="Gap Score (high demand × low healthy supply)"
+                **AXIS_STYLE,
+                title="Gap Score (high demand × low healthy supply)",
+                tickfont=AXIS_FONT,
+                title_font=AXIS_TITLE_FONT,
             ),
-            yaxis=dict(**AXIS_STYLE, title=""),
+            yaxis=dict(
+                **AXIS_STYLE,
+                title="",
+                tickfont=AXIS_FONT,
+                title_font=AXIS_TITLE_FONT,
+            ),
             height=420,
             showlegend=False,
         )
@@ -938,8 +980,18 @@ elif page == "Market Gap":
                 font=dict(size=13, color="#1C2833"),
                 x=0,
             ),
-            xaxis=dict(**AXIS_STYLE, title="High Demand Rate (%)"),
-            yaxis=dict(**AXIS_STYLE, title="In Target Zone (%)"),
+            xaxis=dict(
+                **AXIS_STYLE,
+                title="High Demand Rate (%)",
+                tickfont=AXIS_FONT,
+                title_font=AXIS_TITLE_FONT,
+            ),
+            yaxis=dict(
+                **AXIS_STYLE,
+                title="In Target Zone (%)",
+                tickfont=AXIS_FONT,
+                title_font=AXIS_TITLE_FONT,
+            ),
             height=420,
             annotations=[
                 dict(
@@ -1070,8 +1122,18 @@ elif page == "Market Gap":
         fig_3way.update_layout(
             **PLOTLY_LAYOUT,
             title=dict(text=f"{top_cat} — Gap Visualisation", font=dict(size=13), x=0),
-            xaxis=dict(**AXIS_STYLE, title="Sugar (g per 100g)"),
-            yaxis=dict(**AXIS_STYLE, title="Protein (g per 100g)"),
+            xaxis=dict(
+                **AXIS_STYLE,
+                title="Sugar (g per 100g)",
+                tickfont=AXIS_FONT,
+                title_font=AXIS_TITLE_FONT,
+            ),
+            yaxis=dict(
+                **AXIS_STYLE,
+                title="Protein (g per 100g)",
+                tickfont=AXIS_FONT,
+                title_font=AXIS_TITLE_FONT,
+            ),
             height=440,
             legend=dict(
                 font=dict(size=10),
@@ -1188,8 +1250,18 @@ elif page == "Protein Sources":
             font=dict(size=13, color="#1C2833"),
             x=0,
         ),
-        xaxis=dict(**AXIS_STYLE, title="Number of Products Containing Ingredient"),
-        yaxis=dict(**AXIS_STYLE, title=""),
+        xaxis=dict(
+            **AXIS_STYLE,
+            title="Number of Products Containing Ingredient",
+            tickfont=AXIS_FONT,
+            title_font=AXIS_TITLE_FONT,
+        ),
+        yaxis=dict(
+            **AXIS_STYLE,
+            title="",
+            tickfont=AXIS_FONT,
+            title_font=AXIS_TITLE_FONT,
+        ),
         height=420,
         showlegend=False,
     )
@@ -1254,7 +1326,7 @@ elif page == "Protein Sources":
                 font=dict(size=13, color="#1C2833"),
                 x=0,
             ),
-            xaxis=dict(tickfont=dict(size=10), title=""),
+            xaxis=dict(tickfont=dict(size=10), title="" ),
             yaxis=dict(tickfont=dict(size=10), title=""),
             height=400,
         )
@@ -1415,8 +1487,18 @@ elif page == "Benchmark Shortlist":
             font=dict(size=13, color="#1C2833"),
             x=0,
         ),
-        xaxis=dict(**AXIS_STYLE, title="Sugar (g per 100g)"),
-        yaxis=dict(**AXIS_STYLE, title="Protein (g per 100g)"),
+        xaxis=dict(
+            **AXIS_STYLE,
+            title="Sugar (g per 100g)",
+            tickfont=AXIS_FONT,
+            title_font=AXIS_TITLE_FONT,
+        ),
+        yaxis=dict(
+            **AXIS_STYLE,
+            title="Protein (g per 100g)",
+            tickfont=AXIS_FONT,
+            title_font=AXIS_TITLE_FONT,
+        ),
         height=520,
         legend=dict(
             font=dict(size=10),
