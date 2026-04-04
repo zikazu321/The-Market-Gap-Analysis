@@ -7,7 +7,7 @@ Email: zabdiel.addo@ashesi.edu.gh
 Version: 1.0.0
 Brief: <<brief>>
 -----
-Last Modified: Saturday, 4th April 2026 8:30:20 PM
+Last Modified: Saturday, 4th April 2026 8:34:34 PM
 Modified By: Zabdiel Addo
 -----
 Copyright ©2026 Zabdiel Addo
@@ -1702,8 +1702,18 @@ elif page == "Recommendation":
                     font=dict(size=12, color="#1C2833"),
                     x=0,
                 ),
-                xaxis=dict(**AXIS_STYLE, title="Number of Products"),
-                yaxis=dict(**AXIS_STYLE, title=""),
+                xaxis=dict(
+                    **AXIS_STYLE,
+                    title="Number of Products",
+                    tickfont=AXIS_FONT,
+                    title_font=AXIS_TITLE_FONT,
+                ),
+                yaxis=dict(
+                    **AXIS_STYLE,
+                    title="",
+                    tickfont=AXIS_FONT,
+                    title_font=AXIS_TITLE_FONT,
+                ),
                 height=300,
                 showlegend=False,
             )
