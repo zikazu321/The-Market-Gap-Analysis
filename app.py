@@ -7,7 +7,7 @@ Email: zabdiel.addo@ashesi.edu.gh
 Version: 1.0.0
 Brief: <<brief>>
 -----
-Last Modified: Saturday, 4th April 2026 8:13:37 PM
+Last Modified: Saturday, 4th April 2026 8:14:56 PM
 Modified By: Zabdiel Addo
 -----
 Copyright ©2026 Zabdiel Addo
@@ -347,6 +347,7 @@ AXIS_STYLE = dict(
     linecolor="#94A3B8",
     linewidth=1.4,
     tickcolor="#94A3B8",
+    tickfont=dict(size=13, color="#111827"),
 )
 
 
