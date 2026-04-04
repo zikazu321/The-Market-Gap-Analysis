@@ -7,7 +7,7 @@ Email: zabdiel.addo@ashesi.edu.gh
 Version: 1.0.0
 Brief: <<brief>>
 -----
-Last Modified: Saturday, 4th April 2026 7:47:08 PM
+Last Modified: Saturday, 4th April 2026 7:49:35 PM
 Modified By: Zabdiel Addo
 -----
 Copyright ©2026 Zabdiel Addo
@@ -482,7 +482,7 @@ if page == "Market Overview":
                 ],
                 text=cat_counts["Products"].apply(lambda x: f"{x:,}"),
                 textposition="outside",
-                textfont=dict(size=10, color="#5D6D7E"),
+                textfont=dict(size=10, color="#2C353D"),
                 hovertemplate="<b>%{y}</b><br>Products: %{x:,}<extra></extra>",
             )
         )
@@ -593,7 +593,7 @@ if page == "Market Overview":
             marker_color=hs_colours,
             text=hs_df["Health Score"].apply(lambda x: f"{x:.1f}"),
             textposition="outside",
-            textfont=dict(size=10, color="#5D6D7E"),
+            textfont=dict(size=10, color="#222427"),
             hovertemplate="<b>%{x}</b><br>Health Score: %{y:.1f}<extra></extra>",
         )
     )
@@ -874,7 +874,7 @@ elif page == "Market Gap":
                 marker_color=bar_colours,
                 text=gap_plot["gap_score"].apply(lambda x: f"{x:.3f}"),
                 textposition="outside",
-                textfont=dict(size=10, color="#5D6D7E"),
+                textfont=dict(size=10, color="#1F2225"),
                 hovertemplate=("<b>%{y}</b><br>Gap Score: %{x:.3f}<extra></extra>"),
             )
         )
@@ -910,7 +910,7 @@ elif page == "Market Gap":
                     ),
                     text=[row["Category"].split(" ")[0]],
                     textposition="top center",
-                    textfont=dict(size=8, color="#5D6D7E"),
+                    textfont=dict(size=8, color="#1B1E21"),
                     name=row["Category"],
                     showlegend=False,
                     hovertemplate=(
@@ -1167,7 +1167,7 @@ elif page == "Protein Sources":
                 axis=1,
             ),
             textposition="outside",
-            textfont=dict(size=10, color="#5D6D7E"),
+            textfont=dict(size=10, color="#222528"),
             hovertemplate=("<b>%{y}</b><br>Products: %{x:,}<extra></extra>"),
         )
     )
