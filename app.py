@@ -7,7 +7,7 @@ Email: zabdiel.addo@ashesi.edu.gh
 Version: 1.0.0
 Brief: <<brief>>
 -----
-Last Modified: Saturday, 4th April 2026 8:34:34 PM
+Last Modified: Saturday, 4th April 2026 9:16:15 PM
 Modified By: Zabdiel Addo
 -----
 Copyright ©2026 Zabdiel Addo
@@ -352,6 +352,7 @@ AXIS_STYLE = dict(
 AXIS_FONT = dict(size=13, color="#111827")
 AXIS_TITLE_FONT = dict(size=14, color="#111827")
 LEGEND_FONT = dict(size=10, color="#111827")
+SMALL_AXIS_FONT = dict(size=10, color="#111827")
 
 
 # ─────────────────────────────────────────────
@@ -1136,7 +1137,7 @@ elif page == "Market Gap":
             ),
             height=440,
             legend=dict(
-                font=dict(size=10),
+                font=LEGEND_FONT,
                 bgcolor="rgba(255,255,255,0.9)",
                 bordercolor="#DDE3EC",
                 borderwidth=1,
@@ -1326,8 +1327,16 @@ elif page == "Protein Sources":
                 font=dict(size=13, color="#1C2833"),
                 x=0,
             ),
-            xaxis=dict(tickfont=dict(size=10), title="" ),
-            yaxis=dict(tickfont=dict(size=10), title=""),
+            xaxis=dict(
+                **AXIS_STYLE,
+                title="",
+                tickfont=SMALL_AXIS_FONT,
+            ),
+            yaxis=dict(
+                **AXIS_STYLE,
+                title="",
+                tickfont=SMALL_AXIS_FONT,
+            ),
             height=400,
         )
         st.plotly_chart(fig_heat, use_container_width=True)
@@ -1501,7 +1510,7 @@ elif page == "Benchmark Shortlist":
         ),
         height=520,
         legend=dict(
-            font=dict(size=10),
+            font=LEGEND_FONT,
             bgcolor="rgba(255,255,255,0.9)",
             bordercolor="#DDE3EC",
             borderwidth=1,
