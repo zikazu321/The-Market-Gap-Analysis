@@ -7,7 +7,7 @@ Email: zabdiel.addo@ashesi.edu.gh
 Version: 1.0.0
 Brief: <<brief>>
 -----
-Last Modified: Saturday, 4th April 2026 4:39:35 PM
+Last Modified: Saturday, 4th April 2026 4:41:29 PM
 Modified By: Zabdiel Addo
 -----
 Copyright ©2026 Zabdiel Addo
@@ -173,7 +173,7 @@ st.markdown(
 
     /* Sidebar */
     [data-testid="stSidebar"] {
-        background: #E2E8F0;
+        background: #4a69b0;
         border-right: 1px solid #C7D2DE;
     }
     [data-testid="stSidebar"] .stMarkdown p {
