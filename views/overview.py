@@ -7,12 +7,11 @@ Email: zabdiel.addo@ashesi.edu.gh
 Version: 1.0.0
 Brief: <<brief>>
 -----
-Last Modified: Sunday, 5th April 2026 1:16:09 AM
+Last Modified: Sunday, 5th April 2026 1:35:37 AM
 Modified By: Zabdiel Addo
 -----
 Copyright ©2026 Zabdiel Addo
 """
-
 import plotly.graph_objects as go
 import streamlit as st
 
@@ -26,6 +25,7 @@ def render(
     AXIS_STYLE,
     AXIS_FONT,
     AXIS_TITLE_FONT,
+    LEGEND_FONT,
     LOW_SUGAR,
     HIGH_PROTEIN,
 ):
