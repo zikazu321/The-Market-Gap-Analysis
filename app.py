@@ -7,7 +7,7 @@ Email: zabdiel.addo@ashesi.edu.gh
 Version: 1.0.0
 Brief: <<brief>>
 -----
-Last Modified: Sunday, 5th April 2026 12:47:26 AM
+Last Modified: Sunday, 5th April 2026 12:49:59 AM
 Modified By: Zabdiel Addo
 -----
 Copyright ©2026 Zabdiel Addo
@@ -767,7 +767,7 @@ elif page == "Nutrient Matrix":
         height=560,
         legend=dict(
             title=dict(text="Category", font=dict(size=11)),
-            font=dict(size=10),
+            font=LEGEND_FONT,
             bgcolor="rgba(255,255,255,0.9)",
             bordercolor="#DDE3EC",
             borderwidth=1,
