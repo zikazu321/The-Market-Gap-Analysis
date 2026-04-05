@@ -1,29 +1,18 @@
 """
-File: app.py
-Project: The-Market-Gap-Analysis
-File Created: Friday, 3rd April 2026 10:35:53 PM
-Author: Zabdiel Addo
-Email: zabdiel.addo@ashesi.edu.gh
-Version: 1.0.0
-Brief: <<brief>>
------
-Last Modified: Sunday, 5th April 2026 1:21:13 AM
-Modified By: Zabdiel Addo
------
-Copyright ©2026 Zabdiel Addo
-"""
-
-"""
 Sugar Trap — Snack Market Gap Analysis
 Helix CPG Partners | Strategic Dashboard
-"""
-"""
+
 File: app.py
 Project: The-Market-Gap-Analysis
 Author: Zabdiel Addo
 Email: zabdiel.addo@ashesi.edu.gh
 Version: 2.0.0
 """
+
+import pathlib
+
+import pandas as pd
+import streamlit as st
 
 from views import (
     benchmark,
@@ -33,12 +22,6 @@ from views import (
     protein_sources,
     recommendation,
 )
-
-import pathlib
-
-import pandas as pd
-import streamlit as st
-
 
 # ─────────────────────────────────────────────
 # PAGE CONFIG
