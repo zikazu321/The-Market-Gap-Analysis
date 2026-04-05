@@ -7,7 +7,7 @@ Email: zabdiel.addo@ashesi.edu.gh
 Version: 1.0.0
 Brief: <<brief>>
 -----
-Last Modified: Sunday, 5th April 2026 1:15:40 AM
+Last Modified: Sunday, 5th April 2026 1:21:13 AM
 Modified By: Zabdiel Addo
 -----
 Copyright ©2026 Zabdiel Addo
@@ -25,12 +25,7 @@ Email: zabdiel.addo@ashesi.edu.gh
 Version: 2.0.0
 """
 
-import pathlib
-
-import pandas as pd
-import streamlit as st
-
-from pages import (
+from views import (
     benchmark,
     market_gap,
     nutrient_matrix,
@@ -38,6 +33,12 @@ from pages import (
     protein_sources,
     recommendation,
 )
+
+import pathlib
+
+import pandas as pd
+import streamlit as st
+
 
 # ─────────────────────────────────────────────
 # PAGE CONFIG
