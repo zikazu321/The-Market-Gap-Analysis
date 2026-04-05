@@ -1,7 +1,4 @@
 """
-Sugar Trap — Snack Market Gap Analysis
-Helix CPG Partners | Strategic Dashboard
-
 File: app.py
 Project: The-Market-Gap-Analysis
 Author: Zabdiel Addo
