@@ -7,14 +7,14 @@ Email: zabdiel.addo@ashesi.edu.gh
 Version: 1.0.0
 Brief: <<brief>>
 -----
-Last Modified: Sunday, 5th April 2026 1:16:49 AM
+Last Modified: Sunday, 5th April 2026 1:28:40 AM
 Modified By: Zabdiel Addo
 -----
 Copyright ©2026 Zabdiel Addo
 """
-
 import re
 
+import pandas as pd
 import plotly.graph_objects as go
 import streamlit as st
 
@@ -70,8 +70,6 @@ def render(
         group: good["ingredients_text_clean"].apply(lambda x: _has_term(x, terms)).sum()
         for group, terms in PROTEIN_GROUPS.items()
     }
-
-    import pandas as pd
 
     ps_df = pd.Series(protein_counts).sort_values(ascending=False).reset_index()
     ps_df.columns = ["Source", "Product Count"]

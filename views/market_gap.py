@@ -7,12 +7,12 @@ Email: zabdiel.addo@ashesi.edu.gh
 Version: 1.0.0
 Brief: <<brief>>
 -----
-Last Modified: Sunday, 5th April 2026 1:16:33 AM
+Last Modified: Sunday, 5th April 2026 1:28:07 AM
 Modified By: Zabdiel Addo
 -----
 Copyright ©2026 Zabdiel Addo
 """
-
+import pandas as pd
 import plotly.graph_objects as go
 import streamlit as st
 
@@ -303,7 +303,3 @@ def render(
             ),
         )
         st.plotly_chart(fig_3way, use_container_width=True)
-
-
-# pandas is needed for the comparison table — import at module level
-import pandas as pd  # noqa: E402
