@@ -7,7 +7,7 @@ Email: zabdiel.addo@ashesi.edu.gh
 Version: 1.0.0
 Brief: <<brief>>
 -----
-Last Modified: Saturday, 4th April 2026 9:16:15 PM
+Last Modified: Sunday, 5th April 2026 12:47:26 AM
 Modified By: Zabdiel Addo
 -----
 Copyright ©2026 Zabdiel Addo
@@ -1089,7 +1089,7 @@ elif page == "Market Gap":
                 x=sample_all["sugars_100g"],
                 y=sample_all["proteins_100g"],
                 mode="markers",
-                marker=dict(size=4, color="#BDC3C7", opacity=0.4),
+                marker=dict(size=4, color="#70767A", opacity=0.4),
                 name=f"All ({len(cat_df):,})",
                 hovertemplate="Sugar: %{x:.1f}g<br>Protein: %{y:.1f}g<extra></extra>",
             )
@@ -1122,7 +1122,7 @@ elif page == "Market Gap":
         )
         fig_3way.update_layout(
             **PLOTLY_LAYOUT,
-            title=dict(text=f"{top_cat} — Gap Visualisation", font=dict(size=13), x=0),
+            title=dict(text=f"{top_cat} — Gap Visualisation", font=dict(size=13, color="#1C2833"), x=0),
             xaxis=dict(
                 **AXIS_STYLE,
                 title="Sugar (g per 100g)",
