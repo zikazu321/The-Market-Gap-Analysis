@@ -1,18 +1,3 @@
-/*
- * File: recommendation,py
- * Project: pages
- * File Created: Sunday, 5th April 2026 1:14:23 AM
- * Author: Zabdiel Addo
- * Email: zabdiel.addo@ashesi.edu.gh
- * Version: 1.0.0
- * Brief: <<brief>>
- * -----
- * Last Modified: Sunday, 5th April 2026 1:14:24 AM
- * Modified By: Zabdiel Addo
- * -----
- * Copyright ©2026 Zabdiel Addo
- */
-
 import re
 
 import pandas as pd
