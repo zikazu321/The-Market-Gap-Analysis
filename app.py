@@ -7,7 +7,7 @@ Email: zabdiel.addo@ashesi.edu.gh
 Version: 1.0.0
 Brief: <<brief>>
 -----
-Last Modified: Sunday, 5th April 2026 1:54:33 AM
+Last Modified: Sunday, 5th April 2026 3:44:27 AM
 Modified By: Zabdiel Addo
 -----
 Copyright ©2026 Zabdiel Addo
@@ -24,9 +24,7 @@ import plotly.graph_objects as go
 import streamlit as st
 from plotly.subplots import make_subplots
 
-# ─────────────────────────────────────────────
 # PAGE CONFIG
-# ─────────────────────────────────────────────
 
 st.set_page_config(
     page_title="Sugar Trap | Helix CPG",
@@ -35,9 +33,8 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
-# ─────────────────────────────────────────────
+
 # THEME & STYLE
-# ─────────────────────────────────────────────
 
 COLOURS = {
     "primary": "#1B4F72",
@@ -202,9 +199,7 @@ st.markdown(
 )
 
 
-# ─────────────────────────────────────────────
 # DATA LOADING
-# ─────────────────────────────────────────────
 
 
 @st.cache_data
@@ -250,9 +245,9 @@ df, cat_stats = load_data()
 ALL_CATEGORIES = sorted(df["final_category"].unique())
 
 
-# ─────────────────────────────────────────────
+#
 # SIDEBAR
-# ─────────────────────────────────────────────
+#
 
 with st.sidebar:
     st.markdown("### Sugar Trap")
@@ -299,9 +294,9 @@ with st.sidebar:
     )
 
 
-# ─────────────────────────────────────────────
+#
 # APPLY FILTERS
-# ─────────────────────────────────────────────
+#
 
 if not selected_cats:
     selected_cats = ALL_CATEGORIES
@@ -322,9 +317,9 @@ if show_opportunity:
 filtered_cat_stats = cat_stats[cat_stats.index.isin(selected_cats)].copy()
 
 
-# ─────────────────────────────────────────────
+#
 # PLOTLY DEFAULTS
-# ─────────────────────────────────────────────
+#
 PLOTLY_LAYOUT = dict(
     font_family="Arial, sans-serif",
     font_color="#1C2833",
@@ -355,9 +350,9 @@ LEGEND_FONT = dict(size=10, color="#111827")
 SMALL_AXIS_FONT = dict(size=10, color="#111827")
 
 
-# ─────────────────────────────────────────────
+#
 # NAVIGATION
-# ─────────────────────────────────────────────
+#
 
 PAGES = [
     "Market Overview",
@@ -384,9 +379,8 @@ page = st.radio(
 st.markdown("<hr>", unsafe_allow_html=True)
 
 
-# ═══════════════════════════════════════════════
 # PAGE 1 — MARKET OVERVIEW
-# ═══════════════════════════════════════════════
+#
 
 if page == "Market Overview":
     st.markdown("## Market Overview")
@@ -644,9 +638,9 @@ if page == "Market Overview":
     st.plotly_chart(fig_hs, use_container_width=True)
 
 
-# ═══════════════════════════════════════════════
+#
 # PAGE 2 — NUTRIENT MATRIX
-# ═══════════════════════════════════════════════
+#
 
 elif page == "Nutrient Matrix":
     st.markdown("## Nutrient Matrix")
@@ -871,9 +865,9 @@ elif page == "Nutrient Matrix":
         st.plotly_chart(fig_grid, use_container_width=True)
 
 
-# ═══════════════════════════════════════════════
+#
 # PAGE 3 — MARKET GAP
-# ═══════════════════════════════════════════════
+#
 
 elif page == "Market Gap":
     st.markdown("## Market Gap")
@@ -1157,9 +1151,9 @@ elif page == "Market Gap":
         st.plotly_chart(fig_3way, use_container_width=True)
 
 
-# ═══════════════════════════════════════════════
+#
 # PAGE 4 — PROTEIN SOURCES
-# ═══════════════════════════════════════════════
+#
 
 elif page == "Protein Sources":
     st.markdown("## Protein Sources")
@@ -1353,9 +1347,9 @@ elif page == "Protein Sources":
         st.plotly_chart(fig_heat, use_container_width=True)
 
 
-# ═══════════════════════════════════════════════
+#
 # PAGE 5 — BENCHMARK SHORTLIST
-# ═══════════════════════════════════════════════
+#
 
 elif page == "Benchmark Shortlist":
     st.markdown("## Benchmark Shortlist")
@@ -1538,9 +1532,9 @@ elif page == "Benchmark Shortlist":
     )
 
 
-# ═══════════════════════════════════════════════
+#
 # PAGE 6 — RECOMMENDATION
-# ═══════════════════════════════════════════════
+#
 
 elif page == "Recommendation":
     st.markdown("## Recommendation")

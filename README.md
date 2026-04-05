@@ -1,3 +1,33 @@
+# A. Executive Summary
+
+This project analyzes the snack aisle to identify under-served opportunities for a healthier product launch using Open Food Facts data. After cleaning and categorizing 64,304 snack products across 14 high-level categories, the analysis found that only 5,952 products, or 9.3%, met the target definition of low sugar and high protein. The strongest market opportunity emerged in the **Spreads** category, which combines a high demand rate of 26.8% with only 10.6% of products currently meeting the healthy target-zone criteria. Based on these results, the recommended product direction is a **Spread** with **at least 10.0g of protein** and **less than 6.0g of sugar per 100g**, positioned in a category where demand already exists but healthy supply remains limited.
+
+# B. Project Links
+
+- **Link to Notebook:** [Google Colab Notebook](https://colab.research.google.com/drive/1DufnPjbKKcQRsQjhPPj-4RkGB9Tges8d?usp=sharing)
+- **Link to Dashboard:** [Streamlit Dashboard](https://the-market-gap-analysis-mddxstmxdwhkivepuiios7.streamlit.app/)
+- **Link to Presentation:** [Slides and Video Folder](https://drive.google.com/drive/folders/1O-M78J5NL_4fC2gw-khXBp-lKadZ_S42?usp=sharing)
+- **Optional 2-minute Video Walkthrough:** [Slides and Video Folder](https://drive.google.com/drive/folders/1O-M78J5NL_4fC2gw-khXBp-lKadZ_S42?usp=sharing)
+
+# C. Technical Explanation
+
+## Data Cleaning
+The dataset was cleaned by removing rows with missing or unusable values in the core fields required for analysis, especially product name, sugar, and protein. Biological bounds were applied to filter out impossible nutritional values, and non-snack or unclassifiable products were excluded so that the final dataset focused only on relevant snack products. The `categories_tags` field was then parsed and mapped into 14 readable high-level snack categories to make the analysis more interpretable and presentation-ready.
+
+## Candidate’s Choice Addition
+The additional feature I introduced was a **composite health score** and a **competitive benchmark shortlist**. The composite health score rewarded protein and fibre while penalizing sugar and fat, allowing categories and products to be compared more holistically beyond a simple sugar-versus-protein view. The benchmark shortlist then identified strong target-zone products already in the market, giving the R&D team practical examples to study for product formulation, nutritional positioning, and competitor benchmarking.
+
+---
+
+## Important Note on Code Submission
+
+- Upload the `.ipynb` notebook file to the repository
+- Also upload an **HTML or PDF export** of the notebook so the charts remain visible even if GitHub does not render the notebook properly
+- Ensure the notebook, dashboard, and presentation links are all publicly accessible
+- Once everything is confirmed, submit the links through the official submission form
+
+---
+
 # Project Brief: The "Sugar Trap" Market Gap Analysis
 
 **Client:** Helix CPG Partners (Strategic Food & Beverage Consultancy)  
@@ -121,25 +151,25 @@ Please edit this `README.md` file in your forked repository to include the follo
 
 **Before you submit your form, you MUST complete this checklist.**
 
-> ⚠️ **WARNING:** If you miss any of these items, your submission will be flagged as "Incomplete" and you will **NOT** be invited to an interview. 
+> ⚠️ **WARNING:** If you miss any of these items, your submission will be flagged as "Incomplete" and you will **NOT** be invited to an interview.  
 >
 > **We do not accept "permission error" excuses. Test your links in Incognito Mode.**
 
 ### 1. Repository & Code Checks
-- [ ] **My GitHub Repo is Public.** (Open the link in a Private/Incognito window to verify).
-- [ ] **I have uploaded the `.ipynb` notebook file.**
-- [ ] **I have ALSO uploaded an HTML or PDF export** of the notebook.
-- [ ] **I have NOT uploaded the massive raw dataset.** (Use `.gitignore` or just don't commit the CSV).
-- [ ] **My code uses Relative Paths.** 
+- [✓] **My GitHub Repo is Public.** (Open the link in a Private/Incognito window to verify).
+- [✓] **I have uploaded the `.ipynb` notebook file.**
+- [✓] **I have ALSO uploaded an HTML or PDF export** of the notebook.
+- [✓] **I have NOT uploaded the massive raw dataset.** (Use `.gitignore` or just don't commit the CSV).
+- [✓] **My code uses Relative Paths.** 
 
 ### 2. Deliverable Checks
-- [ ] **My Dashboard link is publicly accessible.** (No login required).
-- [ ] **My Presentation link is publicly accessible.** (Permissions set to "Anyone with the link can view").
-- [ ] **I have updated this `README.md` file** with my Executive Summary and technical notes.
+- [✓] **My Dashboard link is publicly accessible.** (No login required).
+- [✓] **My Presentation link is publicly accessible.** (Permissions set to "Anyone with the link can view").
+- [✓] **I have updated this `README.md` file** with my Executive Summary and technical notes.
 
 ### 3. Completeness
-- [ ] I have completed **User Stories 1-4**.
-- [ ] I have completed the **"Candidate's Choice"** challenge and explained it in the README.
+- [✓] I have completed **User Stories 1-4**.
+- [✓] I have completed the **"Candidate's Choice"** challenge and explained it in the README.
 
 **✅ Only when you have checked every box above, proceed to the submission form.**
 
